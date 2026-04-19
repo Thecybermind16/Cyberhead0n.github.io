@@ -3,354 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Cyberhead0n - Cybersecurity Professional & AI Enthusiast">
-    <title>Cyberhead0n - Cyberpunk Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Cyberpunk Portfolio</title>
     <style>
-        * {
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
         }
-
-        body {
-            background-color: #0a0e27;
-            background-image: 
-                linear-gradient(to bottom, rgba(0, 255, 150, 0.03), transparent),
-                radial-gradient(circle at 20% 50%, rgba(0, 255, 255, 0.05), transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(255, 0, 100, 0.05), transparent 50%);
-            color: #00ff99;
-            font-family: 'Courier New', monospace;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* Animated background */
-        @keyframes glitch {
-            0%, 100% { text-shadow: -2px 0 #00ffff, 2px 0 #ff006e; }
-            50% { text-shadow: 2px 0 #00ffff, -2px 0 #ff006e; }
-        }
-
-        @keyframes flame {
-            0% { color: #ff4500; text-shadow: 0 0 10px #ff6347; }
-            50% { color: #ff8c00; text-shadow: 0 0 20px #ffa500; }
-            100% { color: #ff4500; text-shadow: 0 0 10px #ff6347; }
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
-
         header {
-            background: linear-gradient(135deg, rgba(0, 255, 200, 0.1), rgba(0, 150, 255, 0.1));
-            border-bottom: 3px solid #00ffcc;
-            padding: 2rem;
+            background: linear-gradient(135deg, #00ffcc, #007acc);
+            padding: 20px;
             text-align: center;
-            box-shadow: 0 0 20px rgba(0, 255, 200, 0.3), inset 0 0 20px rgba(0, 100, 100, 0.1);
-            animation: float 3s ease-in-out infinite;
+            box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
         }
-
         h1 {
-            font-size: 3.5rem;
-            color: #00ffcc;
-            text-shadow: 0 0 20px #00ffcc, 0 0 40px #0099ff;
-            margin-bottom: 0.5rem;
-            animation: glitch 0.3s infinite;
+            font-size: 2.5em;
+            text-shadow: 0 0 10px cyan;
         }
-
-        .subtitle {
-            font-size: 1.2rem;
-            color: #00ff99;
-            text-shadow: 0 0 10px #00ff99;
-        }
-
-        nav {
-            background-color: rgba(10, 14, 39, 0.95);
-            padding: 1rem;
-            text-align: center;
-            border-bottom: 2px solid #0099ff;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 0 15px rgba(0, 150, 255, 0.5);
-        }
-
-        nav a {
-            color: #00ffcc;
-            text-decoration: none;
-            margin: 0 1.5rem;
-            font-weight: bold;
-            transition: all 0.3s;
-            border-bottom: 2px solid transparent;
-        }
-
-        nav a:hover {
-            color: #ff0066;
-            border-bottom: 2px solid #ff0066;
-            text-shadow: 0 0 10px #ff0066;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
         section {
-            background: linear-gradient(135deg, rgba(0, 50, 100, 0.2), rgba(50, 0, 100, 0.2));
-            border: 2px solid #00ffcc;
-            border-radius: 10px;
-            padding: 2rem;
-            margin: 2rem 0;
-            box-shadow: 0 0 20px rgba(0, 255, 200, 0.3), inset 0 0 10px rgba(0, 100, 100, 0.1);
-            transition: all 0.3s;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            background: rgba(0, 0, 0, 0.7);
+            box-shadow: 0 0 15px rgba(0, 153, 204, 0.3);
         }
-
-        section:hover {
-            box-shadow: 0 0 30px rgba(0, 255, 200, 0.6), inset 0 0 20px rgba(0, 100, 100, 0.2);
-            border-color: #0099ff;
-        }
-
         h2 {
-            font-size: 2rem;
-            color: #00ff99;
-            text-shadow: 0 0 15px #00ff99, 0 0 30px #0099ff;
-            margin-bottom: 1rem;
-            border-bottom: 2px solid #ff0066;
-            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #007acc;
+            padding-bottom: 10px;
+            text-shadow: 0 0 5px blue;
         }
-
-        h3 {
-            color: #00ffcc;
-            margin-top: 1rem;
-            text-shadow: 0 0 10px #00ffcc;
-        }
-
-        .profile-intro {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: #00ff99;
-        }
-
-        .project-box {
-            background: linear-gradient(135deg, rgba(0, 100, 150, 0.3), rgba(100, 0, 150, 0.3));
-            border: 2px solid #0099ff;
-            padding: 1.5rem;
-            margin: 1rem 0;
-            border-radius: 8px;
-            transition: all 0.3s;
-        }
-
-        .project-box:hover {
-            border-color: #ff0066;
-            box-shadow: 0 0 20px rgba(255, 0, 102, 0.5);
-            transform: translateX(10px);
-        }
-
-        .project-box h3 {
-            color: #ff0066;
-            animation: flame 2s ease-in-out infinite;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1rem;
-        }
-
-        .skill-card {
-            background: linear-gradient(135deg, rgba(0, 150, 200, 0.3), rgba(150, 0, 200, 0.3));
-            border: 2px solid #0099ff;
-            padding: 1rem;
-            border-radius: 8px;
-            text-align: center;
-            transition: all 0.3s;
+        .button {
+            background-color: #00cc66;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
             cursor: pointer;
+            transition: background-color 0.3s;
         }
-
-        .skill-card:hover {
-            border-color: #00ffcc;
-            box-shadow: 0 0 15px rgba(0, 255, 200, 0.5);
-            transform: scale(1.05);
+        .button:hover {
+            background-color: #009933;
         }
-
-        .skill-card p {
-            color: #00ffcc;
-            font-weight: bold;
+        /* Flame animation */
+        .flame {
+            animation: flicker 1s infinite;
         }
-
-        .cert-list {
-            list-style: none;
-        }
-
-        .cert-list li {
-            background: rgba(0, 100, 150, 0.2);
-            border-left: 4px solid #ff0066;
-            padding: 1rem;
-            margin: 0.5rem 0;
-            border-radius: 4px;
-            color: #00ff99;
-            transition: all 0.3s;
-        }
-
-        .cert-list li:hover {
-            border-left-color: #00ffcc;
-            box-shadow: 0 0 10px rgba(0, 255, 200, 0.3);
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-            margin-top: 2rem;
-        }
-
-        .social-links a {
-            color: #00ffcc;
-            text-decoration: none;
-            font-size: 1.2rem;
-            padding: 0.8rem 1.5rem;
-            border: 2px solid #00ffcc;
-            border-radius: 8px;
-            transition: all 0.3s;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .social-links a:hover {
-            color: #ff0066;
-            border-color: #ff0066;
-            box-shadow: 0 0 15px rgba(255, 0, 102, 0.5);
-            text-shadow: 0 0 10px #ff0066;
-        }
-
-        footer {
-            background-color: rgba(10, 14, 39, 0.95);
-            border-top: 3px solid #0099ff;
-            padding: 2rem;
-            text-align: center;
-            color: #00ff99;
-            margin-top: 3rem;
-            box-shadow: inset 0 0 20px rgba(0, 150, 255, 0.2);
-        }
-
-        .flame-text {
-            animation: flame 2s ease-in-out infinite;
-        }
-
-        @media (max-width: 768px) {
-            h1 { font-size: 2rem; }
-            h2 { font-size: 1.5rem; }
-            nav a { margin: 0 0.75rem; font-size: 0.9rem; }
-            .skills-grid { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); }
-            .social-links { gap: 1rem; }
+        @keyframes flicker {
+            0% { opacity: 1; }
+            50% { opacity: 0.8; }
+            100% { opacity: 1; }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>⚡ CYBERHEAD0N ⚡</h1>
-        <p class="subtitle">Cybersecurity | AI | Digital Forensics | OSINT</p>
+        <h1>Cyberpunk Portfolio</h1>
     </header>
-
-    <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#certifications">Certifications</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
-    <div class="container">
-        <!-- About Section -->
-        <section id="about">
-            <h2>About Me</h2>
-            <div class="profile-intro">
-                <p>🔥 A passionate and visionary 19-year-old from India, Krishna is on a mission to transform the digital world. Currently pursuing a <strong>B.Sc. in Cybersecurity</strong>, dreaming of building a futuristic tech startup that merges AI, smart devices, and human development.</p>
-                
-                <p style="margin-top: 1rem;">💡 Deeply inspired by cybersecurity, futuristic technology, and global progress, creating an impactful personal brand through platforms like Instagram (<strong>CyberHead0n</strong>)—delivering tech news, tips, and awareness.</p>
-                
-                <p style="margin-top: 1rem;">🛡️ With a firm belief in national and global responsibility, aiming to become not just a great businessman but also a <span class="flame-text">protector of the digital future</span>, contributing to India's tech revolution and the world's cybersecurity framework.</p>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects">
-            <h2>Featured Projects</h2>
-            <div class="project-box">
-                <h3>🤖 Cyberhead0n Telegram Bot</h3>
-                <p><strong>AI-Powered Cybersecurity Assistant</strong></p>
-                <p>An intelligent Telegram bot designed to help users easily understand cybersecurity topics. Features include:</p>
-                <ul style="margin-left: 2rem; margin-top: 0.5rem;">
-                    <li>📚 Comprehensive cybersecurity topic explanations</li>
-                    <li>🔐 Daily security tips and best practices</li>
-                    <li>🎯 Random cybersecurity insights</li>
-                    <li>⚡ Real-time threat awareness</li>
-                </ul>
-                <p style="margin-top: 1rem;"><strong>Tech Stack:</strong> Python, Telegram API, AI/ML</p>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills">
-            <h2>Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <p>🔐 Network Security</p>
-                </div>
-                <div class="skill-card">
-                    <p>🔍 Digital Forensics</p>
-                </div>
-                <div class="skill-card">
-                    <p>🕵️ OSINT</p>
-                </div>
-                <div class="skill-card">
-                    <p>💻 C</p>
-                </div>
-                <div class="skill-card">
-                    <p>⚙️ C++</p>
-                </div>
-                <div class="skill-card">
-                    <p>🐍 Python</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Certifications Section -->
-        <section id="certifications">
-            <h2>Certifications & Achievements</h2>
-            <ul class="cert-list">
-                <li>🏆 <strong>DFIR (Digital Forensics and Incident Response)</strong> - Red Team Leaders</li>
-                <li>🏆 <strong>Cybersecurity Career Starter Certification</strong> - HACK & FIX</li>
-                <li>🏆 <strong>ATM Penetration Testing & Security Assessment</strong> - Red Team Leaders</li>
-                <li>🏆 <strong>Cyber Analyst</strong> - FORAGE</li>
-            </ul>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact">
-            <h2>Let's Connect</h2>
-            <p style="text-align: center; margin-bottom: 2rem;">Reach out for collaborations, opportunities, or just to discuss cybersecurity!</p>
-            <div class="social-links">
-                <a href="https://github.com/Thecybermind16" target="_blank">
-                    <i class="fab fa-github"></i> GitHub
-                </a>
-                <a href="https://linkedin.com/in/krishna-purander" target="_blank">
-                    <i class="fab fa-linkedin"></i> LinkedIn
-                </a>
-                <a href="mailto:krishnapuranderbajpayee@gmail.com">
-                    <i class="fas fa-envelope"></i> Email
-                </a>
-            </div>
-        </section>
-    </div>
-
-    <footer>
-        <p>© 2026 Cyberhead0n | Building the Future of Cybersecurity 🚀</p>
-        <p style="color: #0099ff; margin-top: 0.5rem;">Stay Secure. Stay Vigilant. 🔒</p>
-    </footer>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Bio goes here...</p>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <p>List of projects goes here...</p>
+    </section>
+    <section id="skills">
+        <h2>Skills</h2>
+        <p>List of skills goes here...</p>
+    </section>
+    <section id="certifications">
+        <h2>Certifications</h2>
+        <p>List of certifications goes here...</p>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Contact information goes here...</p>
+        <button class="button">Get in Touch</button>
+    </section>
 </body>
 </html>
